@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Seventh lab</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://api-maps.yandex.ru/2.1/?lang=en_RU&amp;apikey=<7fb30318-6e4c-4b65-ac81-b8684c6cacb9>" type="text/javascript"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<!-- <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0"> -->
+	<style type="text/css">
+		.h{                                         /*sos3*/
+			/*background-color: lightpink;*/
+			height: 200px;
+			margin-left: 110px;
+			margin-right: 110px;
+		}
+		.dd1{
+			display: flex;
+			justify-content: space-between;
+			margin-top: 10px;
+		}
+		.d1{
+			display: flex;
+			justify-content: flex-start;
+		}
+		.d2{
+			display: flex;
+			justify-content: flex-end;
+		}
+		.dd2{
+			
+			height: 80px;
+			display: flex;
+			justify-content: space-between;
+			margin-top: 30px;
+		}
+		.d2b{
+			padding-top:  31px;
+			justify-content: flex-end;
+		}
+		.dd3{                                   /*sass3*/
+			border: 3px solid grey;
+			border-color: grey;
+			display: flex;
+			justify-content: space-between;
+		}
+		.d3t{
+			width: 375px;
+			margin-top: 50px;
+			margin-left: 80px;
+			
+		}
+		.dd4, .dd6{                            /*sos1*/
+			height: 90px;
+		}
+		.dd4{                                 /*sass1*/
+			display: flex;
+		}
+		.dd5{
+			display: flex;
+			justify-content: space-between;
+		}
+		.dd6{
+			display: flex;
+			
+		}
+		.dd7{                                /*sass2*/
+			display: flex;
+			justify-content: space-between;
+		}
+		.hov:hover{
+			color: #51adcf;
+		}
+		#para13:hover{                         /*sos2*/
+			text-decoration: underline;
+			color: grey;
+			background-color: #cbeaed;
+		}
+		#para14:hover{
+			background-color: #cbeaed;
+			text-decoration: underline;
+			color: grey;
+		}
+		#para15:hover{
+			background-color: #cbeaed;
+			text-decoration: underline;
+			color: grey;
+		}
+		#para16:hover{
+			background-color: #b0cac7;
+		}
+		#para17:hover{
+			background-color: #b0cac7;
+		}
+		#para18:hover{
+			background-color: #b0cac7;
+		}#para19:hover{
+			background-color: #b0cac7;
+		}
+		#para20{
+			border: 3px solid grey;
+			/*display: flex;
+			justify-content: space-between;*/
+			background-image: url('https://assets-global.website-files.com/580ea75512564ed05c3a8455/5bfc62c5aca97fa17998085e_dropbox-blog-image-1434x590.jpg');
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+		#para22{
+			width: 100%;
+			height: 400px;
+			background-color: lightblue;
+		}
+		#inputs{
+			/*justify-content: flex-end;*/
+			margin-left: 100px;
+			display: none;
+		}
+		.fim{
+			width: 600px;
+			height: 450px;
+		}
+		#para23{
+			text-align: center;
+		}
+		@media (max-width: 700px){
+			.h{
+				margin-left: 100px;
+				margin-right: 100px;
+			}
+			.mpara12{
+				margin-top: -30px;
+				margin-left: 65px;
+			}
+			#inputs{
+				margin-left: 20px;
+			}
+
+			.dd2{
+				height: 100px;
+			}
+
+			#mp1{
+				width: 350px;
+				margin-left: -10px;
+
+			}
+
+			.d2b{
+				display: flex;
+				justify-content: space-around;
+				margin-top: 50px;
+				margin-left: -360px;
+				/*padding-bottom: 20px;*/
+			}
+			.dd4{
+				justify-content: space-between;
+			}
+
+			#md2{
+				margin-top: 20px;
+			}
+			.d3t{
+				margin-top: 280px;
+				margin-left: 20px;
+			}
+
+			.fim{
+				position: absolute;
+				width: 294px;
+				height: 250px;
+				margin-left: -294px;
+			}
+
+			.hov{
+				width: -10px;
+			}
+			#smm{
+				
+				margin-left: -10px;
+			}
+			#sm{
+				margin-top: 600px;
+				margin-left: -370px;
+			}
+			#sm2h{
+				margin-top: 1200px;
+				margin-left: 0px;
+			}
+			#sm2{
+				margin-top: 1200px;
+				margin-left: -320px;
+			}
+			#sm3{
+				margin-top: 600px;
+				margin-left: -360px;
+			}
+			#sm4{
+				margin-top: 1160px;
+				margin-left: -350px;
+			}
+			/*#sm8{
+				margin-left: -0px;
+			}*/
+			#bm{
+				margin-top: 620px;
+				margin-left: -300px;
+				margin-bottom: 60px;
+			}
+			#bm2{
+				margin-top: 899px;
+				margin-left: -430px;
+				margin-bottom: 60px;
+			}
+			#bm3{
+				margin-top: 1460px;
+				margin-left: -430px;
+				margin-bottom: 50px;
+			}
+			#bmm10{
+				margin-top: 300px;
+			}
+			.dd7{
+				margin-top: 300px;
+			}
+			/*.dd6{
+				margin-bottom: 400px;
+			}*/
+			#para23{
+				margin-top: 30px;
+			}
+			#map{
+				max-width: 200px;
+				max-height: 200px;
+				margin-left: 40px;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="h">
+		<div class="dd1">
+			<div class="d1">
+				<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQpPYIHBalh3gmF2li4pht5pXQt8FJPJiSYKQ&usqp=CAU" style="width: 143px; height: 23px;">
+				<p style="padding-left: 10px;">Blog</p>
+			</div>
+			<div class="d2">
+				<a href="https://google.com"><img src="https://icons-for-free.com/iconfiles/png/512/magnifying+glass+search+zoom+icon-1320196461375500720.png" style="padding-right: 20px; width: 50px; height: 30px;"></a>
+				<!-- <div style="font-size: 10px; padding: 6px; background-color: lightpink;" id="para12">CATEGORIES</div> -->
+				<div style="font-size: 10px; padding: 6px;" id="para12">CATEGORIES 
+					<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ5HL-K7ZIq7s6tfxXNH1-WgBYfz2McYXTE1g&usqp=CAU" style="width: 7px; height: 4px;" class="mpara12">
+				</div>
+			</div>
+		</div>
+		<div id="para13" style=" display: none; height: 50px; text-align: center; padding-top: 11px;">RENT</div>
+		<div id="para16" style=" display: none; margin-left: 560px; font-size: 10px; width: 100px; text-align: center;">econom</div>
+		<div id="para17" style=" display: none; margin-left: 560px; font-size: 10px; width: 100px; text-align: center;">buisness</div>
+		<div id="para14" style=" display: none; height: 50px; text-align: center; padding-top: 11px;">BUY</div>
+		<div id="para18" style=" display: none; margin-left: 560px; font-size: 10px; width: 100px; text-align: center;">higher 5000$</div>
+		<div id="para19" style=" display: none; margin-left: 560px; font-size: 10px; width: 100px; text-align: center;">lower 5000$</div>
+		<div id="para15" style=" display: none; height: 50px; text-align: center; padding-top: 11px;">All</div>
+		<div class="dd2">
+			<div ><p style="font-size: 22px; justify-content: flex-start; padding-top: 25px; color: grey;" id="mp1">A blog about all the HelloSign things</p></div>
+			<div class="d2b">
+				<button  class="btn btn-secondary btn-sm" style="font-size: 10px; border-radius: 100px; border: 1px;" id="scr1">COMPANY</button>
+				<button  class="btn btn-secondary btn-sm" style="font-size: 10px; border-radius: 100px; border: 1px;" id="scr2">PRODUCTS</button>
+				<button  class="btn btn-secondary btn-sm" style="font-size: 10px; border-radius: 100px; border: 1px;" id="scr3">CUSTOMER</button>
+				<button  class="btn btn-secondary btn-sm" style="font-size: 10px; border-radius: 100px; border: 1px;" id="scr4">TECHNICAL</button>
+				<button  class="btn btn-secondary btn-sm" style="font-size: 10px; border-radius: 100px; border: 1px;" id="scr5">INTELLEGENT BUSINESS</button>
+			</div>
+		</div>
+		<div style="display: flex; height: 80px; " id="md2">
+			<a href="https://www.hellosign.com/" style="font-size: 13px; margin-top: 5px;">HelloSign.com<img src="https://cdn4.iconfinder.com/data/icons/basic-app/1000/BASICAPP_1-08-512.png" alt="img" style="padding-right: 10px; width: 23px; height: 13px; margin-left: 3px;">
+			</a>
+
+			
+			<hr style=" width: 1090px; height: 5px;" >
+		</div>
+		<div class="dd3">
+			<div class="d3t">
+				<button class="btn btn-info" style="font-size: 10px; border-radius: 100px; margin-bottom: 30px;"><a href="https://www.hellosign.com/blog-category/intelligent-business" style="color: white; text-decoration: none;" target="_blank"> CUSTOMER</a></button>
+				<h2 style="font-size: 31px;" class="hov" >RVShare Connects 60,000 RV Oweners with Renters, Speeds Time Revenue</h2>
+				<p style="font-size: 13px;">Octomper 25,2018</p>
+				<p style="font-size: 13px;">See how RVShares leveraged the HelloSign API to grow their businees and boost revenue.</p>
+				<p style="font-size: 13px;">#hellosignapi #customers</p>
+			</div>
+			<div id="sur"><img src="https://assets-global.website-files.com/580ea75512564ed05c3a8455/5ba92ecb3eba1280e81f367a_rvshare-Customer-Story-blog-post-1440x590.png" class="fim" onmouseover="mouseOver()" onmouseout="mouseOut()" id="imgg"></div>
+		</div>
+		<div class="dd4">
+			<div><button  class="btn btn-secondary btn-sm" style="font-size: 10px; border-radius: 100px; border: 1px; margin-top: 50px;"><a href="https://www.hellosign.com/blog-category/intelligent-business" style="color: white; text-decoration: none;" target="_blank"> INTELLIGENT BUSINESS</a></button></div>
+			<div id="bm"><button  class="btn btn-secondary btn-sm" style="font-size: 10px; border-radius: 100px; border: 1px; margin-top: 50px; margin-left: 290px;"><a href="https://www.hellosign.com/blog-category/intelligent-business" style="color: white; text-decoration: none;" target="_blank">INTELLIGENT BUSINESS</a></button></div>
+		</div>
+		<div class="dd5">
+			<div id="smm">
+				<!-- https://techengage.com/wp-content/uploads/2019/06/digital-signature.jpg -->
+				<img src="https://www.isabelgroup.eu/wp-content/uploads/iStock-1133851088-1024x683.jpg" style="width: 350px; height: 250px;">
+				<div style="padding: 35px;">
+					<h4 style="width: 280px; font-size: 23px;" class="hov" >Workflow Automation Only Works if it`s usefull: Raodblocks to Avoid & Key Updates to Make</h4>
+					<p style="font-size: 13px;">Octomber 17, 2018</p>
+					<p style="font-size: 13px; width: 280px;">You have high-valume transaction and high-value employees.Are they doing the best they can-or are they bogged down with inefflcient processes?</p>
+					<p style="font-size: 13px;">#workflow #automation #digitaltransformation </p>
+				</div>
+			</div>
+			<div>
+				<div id="sm">
+					<img src="https://fedelis.asia/wp-content/uploads/2020/08/5d646f4799c8ff22ced5664c_Expert@2x-p-500-300x167.png" style="width: 350px; height: 250px;">
+					<div style="padding: 35px;">
+						<h4 style="width: 280px; font-size: 23px;" class="hov" >HR Compliance Versus Culture: How To Stay Compliant Without Going Insane</h4>
+						<p style="font-size: 13px;">Octomber 15, 2018</p>
+						<p style="font-size: 13px; width: 280px;">Here the tacticsyou need to know to make HR compliancepart of your everyday culture instead of thorn in your said</p>
+						<p style="font-size: 13px;">#hr </p>
+					</div>
+				</div>
+			</div>
+			<!-- <div id="sm2h">
+				<p>l</p>
+			</div> -->
+			<div>
+				<!-- <div style="width: 285px;" id="sm2">
+					<p><b>MOST POPULAR</b></p>
+					<p style="font-size: 15px;">Here`s How to Achieve Employee & Contractor Onboarding Scale</p>
+					<p style="font-size: 15px;">The Ultimate Digital Transformation Roadmap:A Tactical Guide for Corporate Innovation</p>
+					<p style="font-size: 15px;">HelloSign Wins Award for Innovation and COO Named Top Woman in Technology</p>
+					<p style="font-size: 15px;">Built to Scale: How Great Processes Drive Business Growth</p>
+					<br>
+					<br>
+					<p><b>MOST RESENT</b></p>
+					<p style="font-size: 15px;">RV Share Connect 60,000 RV Oweners with Renters, Speeds Time to Revenue</p>
+					<p style="font-size: 15px;">Workflow Automation Only Works if it`s useful: Raodbloks to Avoid & Key Ubdates to Make </p>
+					<p style="font-size: 15px;">HR Compliance Versus Culture:How to Stay Compliance Without Going Insane</p>
+				</div> -->
+				<div id="sm2" style="width: 285px;height: 200px;">
+					<embed src="embed.html" height="500"></embed>
+				</div>
+			</div>
+		</div>
+		<div class="dd6">
+			<div id="bmm10"><button class="btn btn-secondary btn-sm" style="font-size: 10px; border-radius: 100px; border: 1px; margin-top: 50px; "><a href="https://www.hellosign.com/blog-category/intelligent-business" style="color: white; text-decoration: none;" target="_blank"> CUSTOMERS</a></button></div>
+			<div id="bm2"><button  class="btn btn-secondary btn-sm" style="font-size: 10px; border-radius: 100px; border: 1px; margin-top: 50px; margin-left: 340px;"><a href="https://www.hellosign.com/blog-category/intelligent-business" style="color: white; text-decoration: none;" target="_blank">INTELLIGENT BUSINESS</a> </button></div>
+			<div id="bm3"><button  class="btn btn-secondary btn-sm" style="font-size: 10px; border-radius: 100px; border: 1px; margin-top: 50px; margin-left: 290px;"><a href="https://www.hellosign.com/blog-category/intelligent-business" style="color: white; text-decoration: none;" target="_blank"> INTELLIGENT BUSINESS</a></button></div>
+		</div>
+		<div class="dd7">
+			<div id="sm8">
+				<img src="https://hakuna-automata.com/images/bug-squash.png" style="width: 350px; height: 250px;">
+				<div style="padding: 35px;">
+					<h4 style="width: 280px; font-size: 23px;" class="hov" >Climd Credits Connects Students with Financing Options, Increases Revenue 70%</h4>
+					<p style="font-size: 13px;">Octomber 10, 2018</p>
+					<p style="font-size: 13px; width: 280px;">Climd Creadit`s revenue numbers grew like crazy like after integrating the HelloSign API.Read the case study to learn more!</p>
+					<p style="font-size: 13px;">#customer #hellosignapi</p>
+				</div>
+			</div>
+			<div id="sm3">
+				<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRTND80sTur4AYHPQ7BNtciC-uJC6lk0F2fJg&usqp=CAU" style="width: 350px; height: 250px;">
+				<div style="padding: 35px;">
+					<h4 style="width: 280px; font-size: 23px;" class="hov" >How to Make the Business Case for HR Automation</h4>
+					<p style="font-size: 13px;">September 25, 2018</p>
+					<p style="font-size: 13px; width: 280px;">Claim HR`s rightful seat at the table with these buisness cases that prove onbording outomation can save your organization thousands on turnover</p>
+					<p style="font-size: 13px;">#hr #outomation</p>
+				</div>
+			</div>
+			<div id="sm4">
+				<img src="https://www.urank.ru/news/topicimage/n1/321197/" style="width: 350px; height: 250px;">
+				<div style="padding: 35px;">
+					<h4 style="width: 280px; font-size: 23px;" class="hov" >Workflow Content Automation: What It Is, How It Works, & Why It`s the Future Of Business Operation</h4>
+					<p style="font-size: 13px;">Octomber 20, 2018</p>
+					<p style="font-size: 13px; width: 280px;">If yor buisness is still operating paper bound processes,you`re missing out on a world of transparency,efflciency, and improved revenue.</p>
+					<p style="font-size: 13px; width: 300px;">#workflow #outomation #digitaltransformation #enterprise</p>
+				</div>
+			</div>			
+		</div>
+		<div  style="display: flex;justify-content: center;" id="cancel">Cancel</div>
+		<div  style="display: flex;justify-content: center;" id="w2">NO</div>
+		<div id="para20">
+			
+			<div style="display: flex;justify-content: center; color: white;" id="w">click and fill in</div> 
+			<div id="inputs">
+				<p style=" align-items: 20px; margin-top: 20px; display: none;" id="p1">First name: </p><input type="text" name="firstname" id="i1"><br>
+				<p style=" align-items: 20px; display: none;" id="p2">Last name: </p><input type="text" name="lastname" id="i2"> <br>
+				<p style=" justify-content: center; align-items: 20px; display: none;" id="p3">birth`d:</p><input type="date" min ="2002-10-25" max="2020-10-25" id="in3"><br>
+				<select>
+					<option>rent</option>
+					<option>buy</option>
+				</select><br>
+				<input type="Checkbox" name="">Stady
+				<input type="Checkbox" name="">Work<br>
+				<input type="Radio" name="w">Male
+				<input type="Radio" name="w">Fimale<br>
+				<input type="submit" name="" value="submit" id="s" style=" margin-top: 10px; margin-bottom: 10px;">
+			</div>
+			<div id="adv"></div>
+		</div>
+		<div style="height: 250px;"><img src="https://i.mycdn.me/i?r=AzGBqNaF5OQp2lMpnhRx4DEFb-1p85bDTeJ0uLpjNlMR1qLFvi7hJtcHqXO0a8CV9Zo" id="im" style="display: none;"> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSuLTG57BY8aRhroEtimHbtB04ATtAgNC2EGg&usqp=CAU" id="im2" style="display: none;"></div>
+		<div id="para21">
+			<object data="eleventh.html" id="para22"></object>
+		</div>
+		<div style="width: 100%; height: 500px;" id="paraM">
+			<div id="para23">OUR MAP! YOU CAN FIND EASILY :)</div>
+			<div id="map" style="width: 100%; height: 400px; margin-top: 50px; "></div>
+		</div>
+		
+		<div id="sony">
+			<hr style="height: 5px; " id="hr2" >
+			<div style="text-align: center;">
+				<span><a href="https://www.instagram.com/hellosignhq/?hl=ru"><img src="https://avatanplus.com/files/resources/original/5c4d6b0f52c0f1688e6a33eb.png" style="width: 50px; height: 50px;"></a></span>
+				<span><a href="https://www.facebook.com/hellosignapp/"><img src="https://img.icons8.com/ios/452/facebook-f.png" style="width: 50px; height: 50px;"></a></span>
+				<span><a href="https://twitter.com/hellosign"><img src="https://api.icons8.com/download/8fe8cc41b3fded816872efc1555b83abef20b412/iOS7/PNG/512/Social_Networks/twitter-512.png" style="width: 50px; height: 50px;"></a></span>
+			</div>
+			<br>
+			<div>
+				<address style="text-align: center; font-size: 10px;"><i><b><bdo dir="rtl">123</bdo></b> Main.ST <br><bdo>Beilgham,</bdo> <br> <strong>WA 14456</strong> </i></address>
+			</div>
+			<br>
+		</div>
+	</div>
+
+	<script>
+		$("#para12").click(function(){
+			$("#para13").slideToggle("slow");
+			$("#para14").slideToggle("slow");
+			$("#para15").slideToggle("slow");
+		})
+
+		$("#para13").click(function(){
+			$("#para16").slideToggle("slow");
+			$("#para17").slideToggle("slow");
+		})
+
+		$("#para14").click(function(){
+			$("#para18").slideToggle("slow");
+			$("#para19").slideToggle("slow");
+		})
+
+		// $("#par18").click(function(){
+		// 	$("#para20").autofocus();
+		// })
+
+		$("#w").click(function(){
+			$("#inputs").fadeToggle("slow");
+		})
+
+		$("#i1").click(function(){
+			$("#p1").toggle();
+		})
+
+		$("#i2").click(function(){
+			$("#p2").toggle();
+		})
+
+		$("#i3").click(function(){
+			$("#p3").toggle();
+		})
+
+		$(document).ready(function(){
+			$("#s").click(function(){
+				$("#inputs").animate({left:'250px', opacity:0.2});
+			})
+		})
+
+		$("#s").click(function(){
+			$("#im").fadeTo("slow", 0.5);
+		})
+
+		$(document).ready(function(){
+  			$("#cancel").click(function(){
+    			$("#im2").slideDown(5000);
+  			});
+  			$("#w2").click(function(){
+    			$("#im2").stop();
+ 			 });
+		});
+
+		function mouseOver(){
+			document.getElementById("imgg").src = "https://cdn.dribbble.com/users/1411165/screenshots/13203659/media/60f1a2af6e6aeacb92bbef2111b2dfd7.png?compress=1&resize=400x300";
+		}
+
+		function mouseOut(){
+			document.getElementById("imgg").src = "https://assets-global.website-files.com/580ea75512564ed05c3a8455/5ba92ecb3eba1280e81f367a_rvshare-Customer-Story-blog-post-1440x590.png";
+		}
+
+		$("#scr1").click(function(){
+			$('html, body').animate({
+				scrollTop: $('#para23').offset().top
+			}, 1000);
+		});
+
+		$("#scr2").click(function(){
+			$('html, body').animate({
+				scrollTop: $('#smm').offset().top
+			}, 1000);
+		});
+
+		$("#scr3").click(function(){
+			$('html, body').animate({
+				scrollTop: $('#cancel').offset().top
+			}, 1000);
+		});
+
+		$("#scr4").click(function(){
+			$('html, body').animate({
+				scrollTop: $('#para21').offset().top
+			}, 1000);
+		});
+
+		$("#scr5").click(function(){
+			$('html, body').animate({
+				scrollTop: $('#para23').offset().top
+			}, 1000);
+		});
+
+		$("#scr6").click(function(){
+			$('html, body').animate({
+				scrollTop: $('#smm').offset().top
+			}, 1000);
+		});
+
+		$("#para16").click(function(){
+			$('html, body').animate({
+				scrollTop: $('#smm').offset().top
+			}, 1000);
+		});
+
+		$("#para17").click(function(){
+			$('html, body').animate({
+				scrollTop: $('#smm').offset().top
+			}, 1000);
+		});
+
+		$("#para18").click(function(){
+			$('html, body').animate({
+				scrollTop: $('#smm').offset().top
+			}, 1000);
+		});
+
+		$("#para19").click(function(){
+			$('html, body').animate({
+				scrollTop: $('#smm').offset().top
+			}, 1000);
+		});
+
+        ymaps.ready(init);
+        function init(){ 
+            var myMap = new ymaps.Map("map", {
+                center: [55.76, 37.64],
+                zoom: 7
+            }),
+
+            MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+            '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+        ),
+
+        myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+            hintContent: 'HelloSign',
+            balloonContent: 'You click, we open'
+        }, {
+            iconLayout: 'default#image',
+            iconImageHref: 'https://s1.iconbird.com/ico/2013/9/452/w384h5121380476908location.png',
+            iconImageSize: [30, 42],
+            iconImageOffset: [-17, -40]
+        }),///////
+
+        //SARY
+        myGeoObject = new ymaps.GeoObject({
+            geometry: {
+               type: "LineString",
+                coordinates: [
+                    [55.80, 37.50],
+                    [55.70, 37.40]
+                ]
+            },
+        }, {
+            /**SARY line ili SERY*/
+            draggable: true,
+            strokeColor: "#5c6e91",
+          	strokeWidth: 10
+        });
+
+        //PINK
+   		myPolyline = new ymaps.Polyline([
+            [55.80, 37.50],
+            [55.80, 37.40],
+            [55.70, 37.50],
+            [55.70, 37.40]
+        ], {
+            balloonContent: "Polyline"
+        }, {
+            /**z*/
+            balloonCloseButton: false,
+            strokeColor: "#ec5858",
+            strokeWidth: 10
+        });
+
+   		/////
+   		myRectangle = new ymaps.Rectangle([
+        [55.66, 37.60],
+        [55.71, 37.69]
+    	], 
+    // {
+    //     hintContent: 'can't drag',
+    //     balloonContent: 'Rectangle 1'
+    // }, 
+    {
+        fillColor: '#bce6eb',
+        fillOpacity: 0.1,
+        strokeColor: '#0000FF',
+        strokeOpacity: 1,
+        strokeWidth: 6,
+        borderRadius: 5
+    });
+
+    myMap.geoObjects
+        .add(myPlacemark)
+        .add(myGeoObject)
+        .add(myPolyline)
+        .add(myRectangle);
+        }
+	</script>
+</body>
+</html>
